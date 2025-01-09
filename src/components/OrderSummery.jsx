@@ -20,7 +20,7 @@ export const OrderSummery = () => {
     handleSubtotal();
   }, [cartItems]);  
   return (
-    <aside className="mt-8 border rounded-lg p-4 sm:w-[30%] md:w-[25%] w-full  sm:fixed md:right-7 sm:right-7 bg-slate-100">
+    <aside className={`mt-8 border rounded-lg p-4 sm:w-[30%] md:w-[25%] w-full ${subTotal > 0 ? "" : "hidden"}  sm:fixed md:right-7 sm:right-7 bg-slate-100`}>
       <h2 className="text-2xl font-bold mb-6">Order Summary</h2>
       
       <table className="w-full mb-6">

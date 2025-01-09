@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { BlackFriday } from './BlackFriday'
 import { ProductAbout } from './ProductAbout'
+import { Link } from 'react-router'
 
 export const About = () => {
     const [products, setProducts] = useState([])
@@ -21,9 +22,12 @@ export const About = () => {
     <section className=' flex gap-6 flex-col md:flex-row    '>
         <BlackFriday/>
         {/* {some products} */}
-        <div className='grid grid-cols-2 gap-5 mx-auto  '>
+        <div className='grid grid-cols-2  mx-auto items-center  '>
             {products.map((product) => (
-                <ProductAbout key={product.id} {...product} />
+                <Link to={`/product/${product.id}`} key={product.id}>
+                    <ProductAbout {...product} />
+                </Link>
+                
             ))}
         </div>
         

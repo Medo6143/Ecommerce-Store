@@ -30,8 +30,8 @@ export const BlackFriday = () => {
     };
   
     return (
-      <div className="relative h-[100%] w-[90%] md:w-[60%] max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg ">
-        {/* Images */}
+      <div className="relative h-[100%] w-[90%] ] md:w-[50%]  mx-auto overflow-hidden rounded-lg shadow-lg  ">
+      
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex}`}
@@ -55,7 +55,7 @@ export const BlackFriday = () => {
         </button>
   
         {/* Dots Indicator */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 ">
           {images.map((_, index) => (
             <button
               key={index}

@@ -5,7 +5,7 @@ import { ProductsCart } from "../components/ProductsCart";
 import { getProductsCart } from "../utility/getProductsCart";
 import { useDispatch, useSelector } from "react-redux";
 import { AuthContext } from "../servieces/context/AuthContext";
-import { doc } from "firebase/firestore";
+import { FiShoppingCart } from "react-icons/fi";
 
 export const Cart = () => {
   const dispatch = useDispatch();
@@ -26,7 +26,6 @@ export const Cart = () => {
 
     fetchCart();
   }, [userId, dispatch]);
-  console.log(cartItems);
 
 
   
@@ -40,13 +39,16 @@ export const Cart = () => {
           <section className="md:w-[70%] sm:w-[80%] w-full">
             {cartItems.length ? (
               cartItems.map((item) => (
-                <ProductsCart key={item.id} product={item} onclick={() => {}} />
+                <ProductsCart key={item.id} product={item} />
               ))
             ) : (
-              <p>Your cart is empty. Start adding some items!</p>
+              <div className="flex flex-col items-center justify-center">
+                <FiShoppingCart className="text-9xl text-gray-400 mb-4" />
+                 <p className="text-lg text-gray-600" aria-label="Your cart is empty">Your cart is empty. Start adding some items!</p>
+              </div>
             )}
           </section>
-          <OrderSummery  />
+          <OrderSummery/>
         </section>
       </main>
     </>

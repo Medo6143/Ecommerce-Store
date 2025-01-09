@@ -4,7 +4,8 @@ import { setProducts, setIsLoading, setError } from "../store/ProductSlice";
 export const useProducts = () => {
     const dispatch = useDispatch();
     const URL_API = "https://fakestoreapi.in/api/products";
-    
+
+
     const fetchProducts = async () => {
       try {
         dispatch(setIsLoading(true));

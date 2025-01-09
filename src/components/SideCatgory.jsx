@@ -1,21 +1,31 @@
+import { useDispatch, useSelector } from "react-redux";
+import { setProducts } from "../store/ProductSlice";
 
-export const SideCatgory = () => {
+export const SideCategory = () => {
+
+  const dispatch = useDispatch();
+  const {products} = useSelector((state) => state.products.products); 
+
+  const handleCategory = (category) => {    
+    const filteredProducts = products.filter((product) => product.category === category);
+    dispatch(setProducts(filteredProducts));
+
+    console.log(filteredProducts);
+  }
 
   return (
  
     
-        <aside aria-label='sidebar for catgories' className= 'top-16 h-screen bg-gray-500 w-[12%] fixed  bg-gradient-to-tl hidden md:block to-[#FDD5DB] from-[#DFEDFE]'>
+        <aside aria-label='sidebar for catgories' className= 'sm:top-[4.6rem] bottom-0  z-50 w-full sm:h-screen bg-gray-500 lg:w-[12%] md:w-[20%]   fixed  bg-gradient-to-tl  md:block to-[#FDD5DB] from-[#DFEDFE]'>
 
-          <h2 className='text-xl font-bold text-gray-800 p-3 text-center' >Categories</h2>
+          <h2 className='text-xl font-bold text-gray-800 p-3 text-center hidden sm:block' >Categories</h2>
 
-          <ul className='  '>
+          <ul className="flex sm:flex-col flex-row justify-start ">
 
-            <li className='p-3 text-  hover:bg-white cursor-pointer m-auto font-bold'>Tv</li>
-            <li className='p-3 text-  hover:bg-white cursor-pointer m-auto font-bold'>Audio</li>
-            <li className='p-3 text-  hover:bg-white cursor-pointer m-auto font-bold'>Laptop</li>
-            <li className='p-3 text-  hover:bg-white cursor-pointer m-auto font-bold'>Mobile</li>
-            <li className='p-3 text-  hover:bg-white cursor-pointer m-auto font-bold'>Gaming</li>
-            <li className='p-3 text-  hover:bg-white cursor-pointer m-auto font-bold'>Appliances</li>
+            <li className='p-3 w-full  hover:bg-white cursor-pointer m-auto font-bold' onClick={() => handleCategory('tv')}>Tv</li>
+            <li className='p-3 w-full  hover:bg-white cursor-pointer m-auto font-bold' onClick={() => handleCategory('audio')}>Audio</li>
+            <li className='p-3 w-full  hover:bg-white cursor-pointer m-auto font-bold'   onClick={() => handleCategory('mobile')}>Mobile</li>
+            <li className='p-3 w-full  hover:bg-white cursor-pointer m-auto font-bold' onClick={() => handleCategory('gaming')}>Gaming</li>
 
           </ul>
 

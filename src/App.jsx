@@ -1,12 +1,12 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router"
-import RegisterPage from "./Pages/Register"
-import Login from "./Pages/Login"
-import { Home } from "./Pages/Home"
+import RegisterPage from "./pages/Register"
+import Login from "./pages/Login"
+import { Home } from "./pages/Home"
 import { useContext } from "react"
 import { AuthContext } from "./servieces/context/AuthContext"
-import { Page404 } from "./Pages/Page404"
-import Product from "./Pages/Product"
-import { Cart } from "./Pages/cart"
+import { Page404 } from "./pages/Page404"
+import Product from "./pages/Product"
+import { Cart } from "./pages/cart"
 
 function App() {
 
