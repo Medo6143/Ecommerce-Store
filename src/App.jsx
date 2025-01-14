@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "./servieces/context/AuthContext";
 import { Page404 } from "./page/Page404";
 import Product from "./page/Product";
-import { Cart } from "./page/cart";
+import { Cart } from "./page/Cart";
 
 function App() {
   const { user } = useContext(AuthContext);
