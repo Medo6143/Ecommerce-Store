@@ -30,7 +30,7 @@ export const BlackFriday = () => {
     };
   
     return (
-      <div className="relative h-[100%] w-[90%] ] md:w-[50%]  mx-auto overflow-hidden rounded-lg shadow-lg  ">
+      <div className="relative h-[100%] w-[90%] ] md:w-[150%]   mx-auto overflow-hidden rounded-lg shadow-lg  ">
       
         <img
           src={images[currentIndex]}

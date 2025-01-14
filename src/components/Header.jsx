@@ -1,5 +1,4 @@
 import { FiLogOut, FiSearch, FiShoppingCart, FiUser } from "react-icons/fi";
-import { IoNotifications } from "react-icons/io5";
 import { FaShopify } from "react-icons/fa";
 import { Logout } from "../servieces/firebase/auth";
 import { Link } from "react-router";
