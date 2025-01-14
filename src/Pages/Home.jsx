@@ -28,28 +28,26 @@ export const Home = () => {
     fetchCart();
   }, [userId, dispatch]);
 
-
   return (
     <>
-       <div className=" flex flex-col">
-      <Header />
-      
-      <div className="flex flex-1">
-        {/* Sidebar */}
+      <div className=" flex flex-col">
+        <Header />
+
+        <div className="flex flex-1">
+          {/* Sidebar */}
           <SideCategory />
 
-        {/* Main Content */}
-        <main className="flex-1 sm:ml-40  lg:ml-56 px-4 py-8 mt-20">
-          <div className="max-w-7xl mx-auto">
-            <About />
-            <Products />
-          </div>
-        </main>
+          {/* Main Content */}
+          <main className="flex-1 sm:ml-40  lg:ml-56 px-4 py-8 mt-20">
+            <div className="max-w-7xl mx-auto">
+              <About />
+              <Products />
+            </div>
+          </main>
+        </div>
+
+        <Footer />
       </div>
-
-      <Footer />
-    </div>
-
     </>
   );
 };

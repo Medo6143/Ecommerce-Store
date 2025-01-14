@@ -27,9 +27,6 @@ export const Cart = () => {
     fetchCart();
   }, [userId, dispatch]);
 
-
-  
-
   return (
     <>
       <Header />
@@ -44,11 +41,16 @@ export const Cart = () => {
             ) : (
               <div className="flex flex-col items-center justify-center">
                 <FiShoppingCart className="text-9xl text-gray-400 mb-4" />
-                 <p className="text-lg text-gray-600" aria-label="Your cart is empty">Your cart is empty. Start adding some items!</p>
+                <p
+                  className="text-lg text-gray-600"
+                  aria-label="Your cart is empty"
+                >
+                  Your cart is empty. Start adding some items!
+                </p>
               </div>
             )}
           </section>
-          <OrderSummery/>
+          <OrderSummery />
         </section>
       </main>
     </>

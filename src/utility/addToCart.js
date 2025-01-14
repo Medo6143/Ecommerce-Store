@@ -6,7 +6,13 @@ const addToCart = async (userId, product) => {
     throw new Error("User ID is required");
   }
 
-  if (!product || !product.id || !product.name || !product.price || !product.quantity) {
+  if (
+    !product ||
+    !product.id ||
+    !product.name ||
+    !product.price ||
+    !product.quantity
+  ) {
     throw new Error("Invalid product details");
   }
 
@@ -23,7 +29,9 @@ const addToCart = async (userId, product) => {
           Image: product.image,
           name: product.name,
           price: product.price,
-          quantity: existingProduct ? existingProduct.quantity + product.quantity : product.quantity,
+          quantity: existingProduct
+            ? existingProduct.quantity + product.quantity
+            : product.quantity,
           updatedAt: new Date().toISOString(),
         },
       });

@@ -7,7 +7,7 @@ const removeProductCart = async (userId, productId) => {
   }
 
   if (!productId) {
-    throw new Error("Product ID is required"); 
+    throw new Error("Product ID is required");
   }
 
   try {
@@ -19,7 +19,7 @@ const removeProductCart = async (userId, productId) => {
     }
 
     const cartData = userCartDoc.data().cart || {};
-    
+
     if (!cartData[productId]) {
       throw new Error("Product not found in cart");
     }
@@ -29,11 +29,10 @@ const removeProductCart = async (userId, productId) => {
 
     // Update the cart document
     await updateDoc(userCartRef, {
-      cart: cartData
+      cart: cartData,
     });
 
     return { success: true };
-
   } catch (error) {
     throw new Error(`Failed to remove product from cart: ${error.message}`);
   }

@@ -1,4 +1,3 @@
-
 export const ProductAbout = (product) => {
   return (
     <div className="flex flex-col md:flex-row gap-3 mx-auto  p-2 border border-gray-300 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 md:w-[80%] w-[90%] max-w-[500px] cursor-pointer bg-white">
@@ -21,8 +20,12 @@ export const ProductAbout = (product) => {
 
         {/* Price Section */}
         <div className="flex items-center space-x-3">
-          <span className="text-gray-500 line-through text-sm">{product.oldPrice}</span>
-          <span className="text-2xl font-bold text-green-600">{product.newPrice}</span>
+          <span className="text-gray-500 line-through text-sm">
+            {product.oldPrice}
+          </span>
+          <span className="text-2xl font-bold text-green-600">
+            {product.newPrice}
+          </span>
         </div>
 
         {/* Discount Info */}
@@ -32,8 +35,6 @@ export const ProductAbout = (product) => {
           </span>
           <span className="text-gray-500">Limited Offer</span>
         </div>
-
-     
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ export const getProductsCart = async (userId, dispatch) => {
     const cartData = userCartDoc.data().cart || {};
     const cartItems = Object.entries(cartData).map(([id, item]) => ({
       id,
-      ...item
+      ...item,
     }));
 
     dispatch(setCartItems(cartItems));

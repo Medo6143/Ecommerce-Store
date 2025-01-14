@@ -1,5 +1,13 @@
-import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from "react-router-dom";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,8 +17,12 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
-              <h3 className="text-xl font-semibold text-white">Subscribe to our newsletter</h3>
-              <p className="text-gray-400">Get the latest updates on new products and upcoming sales</p>
+              <h3 className="text-xl font-semibold text-white">
+                Subscribe to our newsletter
+              </h3>
+              <p className="text-gray-400">
+                Get the latest updates on new products and upcoming sales
+              </p>
             </div>
             <div className="flex w-full md:w-auto">
               <input
@@ -32,7 +44,10 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h2 className="text-xl font-bold text-white mb-4">Shopistore</h2>
-            <p className="text-gray-400 mb-4">Your one-stop shop for all your shopping needs. Quality products, great prices, and excellent customer service.</p>
+            <p className="text-gray-400 mb-4">
+              Your one-stop shop for all your shopping needs. Quality products,
+              great prices, and excellent customer service.
+            </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white transition-colors">
                 <Facebook size={20} />
@@ -53,11 +68,43 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/products" className="hover:text-white transition-colors">Products</Link></li>
-              <li><Link to="/categories" className="hover:text-white transition-colors">Categories</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li>
+                <Link to="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products"
+                  className="hover:text-white transition-colors"
+                >
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/categories"
+                  className="hover:text-white transition-colors"
+                >
+                  Categories
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="hover:text-white transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-white transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -65,11 +112,43 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Customer Service</h3>
             <ul className="space-y-2">
-              <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link to="/shipping" className="hover:text-white transition-colors">Shipping Information</Link></li>
-              <li><Link to="/returns" className="hover:text-white transition-colors">Returns Policy</Link></li>
-              <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
+              <li>
+                <Link to="/faq" className="hover:text-white transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/shipping"
+                  className="hover:text-white transition-colors"
+                >
+                  Shipping Information
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/returns"
+                  className="hover:text-white transition-colors"
+                >
+                  Returns Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/privacy"
+                  className="hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms"
+                  className="hover:text-white transition-colors"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -100,9 +179,24 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm">© 2025 Shopistore. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-sm hover:text-white transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="text-sm hover:text-white transition-colors">Terms of Service</Link>
-              <Link to="/sitemap" className="text-sm hover:text-white transition-colors">Sitemap</Link>
+              <Link
+                to="/privacy"
+                className="text-sm hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                to="/terms"
+                className="text-sm hover:text-white transition-colors"
+              >
+                Terms of Service
+              </Link>
+              <Link
+                to="/sitemap"
+                className="text-sm hover:text-white transition-colors"
+              >
+                Sitemap
+              </Link>
             </div>
           </div>
         </div>
