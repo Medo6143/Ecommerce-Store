@@ -31,10 +31,12 @@ export const Products = () => {
   if (!products?.length) {
     return (
       <div className="flex items-center justify-center h-64">
-        <p className="text-gray-500">No products available</p>
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
       </div>
     );
   }
+
+
 
   return (
     <section className="grid grid-cols-2 sm:grid-cols-4  flex-wrap  gap-5 mt-16 px-4 max-w-7xl mx-auto">
