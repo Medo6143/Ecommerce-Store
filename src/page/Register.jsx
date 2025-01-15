@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, Navigate } from "react-router";
 import { Register } from "../servieces/firebase/auth";
 import { useState, useEffect } from "react";
 
@@ -15,6 +15,7 @@ const RegisterPage = () => {
       const timer = setTimeout(() => {
         setError("");
         setSuccess("");
+
       }, 3000);
       return () => clearTimeout(timer);
     }
@@ -31,11 +32,11 @@ const RegisterPage = () => {
     try {
       await Register(email, password, name);
       setSuccess("Registration successful!");
-      // Redirect to login page after successful registration
-      setTimeout(() => {}, 3000);
+      setTimeout(() => {
+        window.location.href = "/login";
+      }, 1000);
     } catch (err) {
       setError(err.message || "Failed to create account");
-      console.error(err);
     }
   };
 
