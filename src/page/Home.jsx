@@ -38,7 +38,7 @@ export const Home = () => {
           <SideCategory />
 
           {/* Main Content */}
-          <main className="flex-1 sm:ml-40  lg:ml-56 px-4 py-8 mt-20">
+          <main className="flex-1 sm:ml-40 md:ml-48   px-4 py-8 mt-20">
             <div className="max-w-7xl mx-auto">
               <About />
               <Products />

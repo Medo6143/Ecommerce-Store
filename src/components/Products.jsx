@@ -37,7 +37,7 @@ export const Products = () => {
   }
 
   return (
-    <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-5 mt-16 px-4 max-w-7xl mx-auto">
+    <section className="grid grid-cols-2 sm:grid-cols-4  flex-wrap  gap-5 mt-16 px-4 max-w-7xl mx-auto">
       {filteredProducts.map((product) => (
         <Link
           to={`/product/${product.id}`}
